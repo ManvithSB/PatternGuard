@@ -1,0 +1,134 @@
+/* Footer Styles */
+.footer-wrapper {
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-light);
+  padding: 64px 0 32px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr;
+  gap: 50px;
+  margin-bottom: 48px;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy-primary);
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.footer-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--navy-secondary);
+  width: fit-content;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+/* Links */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.footer-group-title {
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--navy-primary);
+  margin-bottom: 14px;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list li span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copyright-text,
+.version-text {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
