@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/shield.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>PatternGuard — Fintech Dark-Pattern Auditing</title>
     <meta
       name="description"
@@ -15,7 +15,20 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-  </head>
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('patternguard_theme') || 'system';
+          var theme = saved;
+          if (saved === 'system') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.setAttribute('data-theme-preference', saved);
+        } catch (e) {}
+      })();
+    </script>
+  </head>,StartLine:14,TargetContent:
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

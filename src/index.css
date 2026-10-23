@@ -4,62 +4,138 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
+  /* Default Light Theme Variables */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
   --bg-tertiary: #f1f5f9;
-  --bg-subtle-blue: #f0f7ff;
+  --bg-subtle-blue: #eff6ff;
   --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-input: #ffffff;
+  --bg-code: #f1f5f9;
 
-  /* Navy & Slate Typography */
-  --navy-dark: #0a1128;
-  --navy-primary: #0f172a;
-  --navy-secondary: #1e293b;
+  /* Typography */
+  --navy-dark: #0f172a;
+  --navy-primary: #1e293b;
+  --navy-secondary: #334155;
   --text-muted: #64748b;
   --text-light: #94a3b8;
 
-  /* Blue Accents */
+  /* Blue & Teal Accents */
   --blue-primary: #2563eb;
   --blue-hover: #1d4ed8;
   --blue-active: #1e40af;
   --blue-subtle: #dbeafe;
   --blue-light: #eff6ff;
   --blue-glow: rgba(37, 99, 235, 0.12);
+  --accent-teal: #0d9488;
 
   /* Borders & Dividers */
   --border-light: #e2e8f0;
-  --border-subtle: #edf2f7;
-  --border-focus: #3b82f6;
+  --border-subtle: #cbd5e1;
+  --border-focus: #2563eb;
 
-  /* Accents & Status (Fintech Risk Badges) */
+  /* Badges & Severity Colors */
   --badge-blue-bg: #eff6ff;
   --badge-blue-text: #1d4ed8;
   --badge-blue-border: #bfdbfe;
-  
+
+  --badge-high-bg: #fef2f2;
+  --badge-high-text: #dc2626;
+  --badge-high-border: #fca5a5;
+
+  --badge-med-bg: #fffbeb;
+  --badge-med-text: #d97706;
+  --badge-med-border: #fde68a;
+
+  --badge-low-bg: #f0fdf4;
+  --badge-low-text: #16a34a;
+  --badge-low-border: #bbf7d0;
+
   --warning-bg: #fffbeb;
   --warning-text: #b45309;
   --warning-border: #fde68a;
 
-  /* Typography */
+  /* Typography Fonts */
   --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
   --shadow-card: 0 12px 32px -4px rgba(15, 23, 42, 0.06), 0 4px 8px -2px rgba(15, 23, 42, 0.03);
 
-  /* Layout */
+  /* Layout & Spacing */
   --container-max-width: 1200px;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-full: 9999px;
-  
+
   /* Transitions */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.25s ease;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --bg-primary: #0b1329;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --bg-subtle-blue: #132247;
+  --bg-card: #111c38;
+  --bg-card-hover: #172448;
+  --bg-input: #0b1329;
+  --bg-code: #0b1329;
+
+  /* Typography */
+  --navy-dark: #f8fafc;
+  --navy-primary: #f1f5f9;
+  --navy-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+
+  /* Blue & Teal Accents */
+  --blue-primary: #3b82f6;
+  --blue-hover: #60a5fa;
+  --blue-active: #2563eb;
+  --blue-subtle: #1e3a8a;
+  --blue-light: #172554;
+  --blue-glow: rgba(59, 130, 246, 0.25);
+  --accent-teal: #14b8a6;
+
+  /* Borders & Dividers */
+  --border-light: #1e293b;
+  --border-subtle: #334155;
+  --border-focus: #3b82f6;
+
+  /* Badges & Severity Colors */
+  --badge-blue-bg: #172554;
+  --badge-blue-text: #60a5fa;
+  --badge-blue-border: #1e40af;
+
+  --badge-high-bg: #450a0a;
+  --badge-high-text: #fca5a5;
+  --badge-high-border: #991b1b;
+
+  --badge-med-bg: #451a03;
+  --badge-med-text: #fde68a;
+  --badge-med-border: #92400e;
+
+  --badge-low-bg: #052e16;
+  --badge-low-text: #86efac;
+  --badge-low-border: #166534;
+
+  --warning-bg: #321c03;
+  --warning-text: #fde68a;
+  --warning-border: #78350f;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 12px 32px -4px rgba(0, 0, 0, 0.4);
 }
 
 /* CSS Reset & Defaults */

@@ -1,5 +1,5 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +7,55 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node.js
+node_modules/
+dist/
+dist-ssr/
 *.local
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Python virtual environments
+.venv/
+.venv-ocr-test/
+backend/.venv/
+backend/.venv-ocr-test/
+venv/
+ENV/
+env/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Temporary backups and debug outputs
+*.bak
+ocr_backup.py
+ocr_dump.txt
+regex_test.txt
+# Android generated files
+android/.gradle/
+android/.idea/
+android/build/
+android/**/build/
+android/local.properties
+
+# Android signing files
+*.jks
+*.keystore
